@@ -116,7 +116,7 @@ public class CodonUsageAlgorithm extends BaseAlgorithm {
       for (int frame = 0 ; frame < 3 ; ++frame) 
       {
         final int real_frame = (frame + start + 2) % 3;
-        for (int i = frame ; i < sub_sequence_length - 3 ; i += 3) 
+        for (int i = frame ; i < sub_sequence_length ; i += 3) 
         {
           final char base1 = sequence[i];
           final char base2 = sequence[i + 1];
@@ -135,7 +135,7 @@ public class CodonUsageAlgorithm extends BaseAlgorithm {
       for(int frame = 2; frame >= 0 ; --frame) 
       {
         final int real_frame = (frame + start + 2) % 3;
-        for (int i = frame ; i < sub_sequence_length - 3 ; i += 3) 
+        for (int i = frame ; i < sub_sequence_length ; i += 3) 
         {
           final char base1 = Bases.complement(sequence[i + 2]);
           final char base2 = Bases.complement(sequence[i + 1]);
